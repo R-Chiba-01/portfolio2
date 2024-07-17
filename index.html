@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人用ポートフォリオ</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+</head>
+<body>
+  <!-- Hero section -->
+  <div class="hero">
+    <nav>
+      <h2 class="logo">R.<span>Chiba</span></h2>
+      <ul>
+        <li><a href="https://r-chiba-01.github.io/home/">ホーム</a></li>
+        <li><a href="#portfolio">ポートフォリオ</a></li>
+      </ul>
+    </nav>
+
+  <div class="content">
+    <h4>Mann-Whitney U test 自動化プログラム</h4>
+  </div>
+</div>
+  
+   <!-- 背景および目的 -->
+   <section class="about">
+    <div class="main">
+      <div class="about-text">
+        <h2>背景および目的</h2>
+        <p>
+          研究の過程で、疾患群と健常群の間で正規性に従わない約1000種類の因子の発現量の違いを比較検定する必要があった。しかし、研究室で用いていたソフトウェア (Prism GraphPad) は因子をそれぞれ個別に検定するため、もしこのソフトウェアで解析を行った場合、膨大な時間を要することとなる。また、正規性に従う因子であれば、Student t-testを行うツールなどが存在するが、規性に従わない因子のMann-Whitney U-testの場合はそのようなツールがない。そこで、Pythonを用いて解析するプログラムを作成することとした。
+        </p>
+      </div>
+      <img src="./img/IMG_3385.png" alt="" />
+    </div>
+  </section>
+
+     <!-- 方法 -->
+     <section class="method">
+      <div class="main">
+        <img src="./img/method.fig.png" alt="" />
+        <div class="method-text">
+          <h2>方法</h2>
+          <p>
+            ①	データファイルの読み込み <br />
+            ②	グループ分け 群を指定 <br />
+            ③	検定量の算出 <br />
+            ④	結果の表示 <br />
+            ⑤	結果をDataFrameに変換 <br />
+            ⑥	CSVファイルとして保存
+          </p>
+          <a href="https://r-chiba-01.github.io/portfplio2/" class="button">実際のソースコードはこちら</a>
+        </div>
+      </div>
+    </section>
+
+   <!-- 結果および考察 -->
+   <section class="result">
+    <div class="main">
+      <div class="result-text">
+        <h2>結果および考察</h2>
+        <p>
+          プログラムを用いて解析を行なったところ、各因子に対してMann-Whitney U-testを行なった結果のCSVファイルを取得することができた。また、これらによって得られた値を既存のソフトウェアにて検定したところ同様の結果が得られた。以上の結果より、本プログラムによって既存のソフトウェアよりも迅速にかつ、既存のソフトウェアと同等の正確な算出結果を得ることができたと言える。
+        </p>
+      </div>
+      <img src="./img/result.fig.png" alt="" />
+    </div>
+  </section>
+ 
+ 
+    <!-- service section start -->
+  <div class="service">
+    <div class="title">
+      <section id="portfolio">
+      <h2>ポートフォリオ</h2>
+     </section>
+    </div>
+
+    <div class="box">
+      <div class="card">
+        <i class="fas fa-bars"> </i>
+        <h5>Mann-Whitney U test<br />
+          自動化プログラム</h5>
+        <div class="pra">
+          <p>
+           ノンパラメトリックの2群間の比較を行う際、既存のソフトウェアでは各因子をそれぞれ比較する必要があった。そこで、一括で解析ができるプログラムを作成した。
+            </p>
+            <p style="text-align: center">
+              <a href="https://r-chiba-01.github.io/portfplio1/" class="button">もっと読む</a>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fas fa-user"> </i>
+          <h5>ROC分析<br />
+            自動化プログラム</h5>
+          <div class="pra">
+            <p>
+            複数の因子をロジスティック回帰によって組み合わせてROC分析を行う際、膨大な数の組み合わせが存在する。そこで、すべての組み合わせを自動で作成し、解析できるプログラムを作成した。
+            </p>
+            <p style="text-align: center">
+              <a href="https://r-chiba-01.github.io/portfplio2/" class="button">もっと読む</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
